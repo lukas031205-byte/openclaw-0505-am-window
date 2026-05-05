@@ -20,7 +20,7 @@ print('OK', flush=True)
 
 # Load CIFAR-10
 cifar = datasets.CIFAR10(root='/tmp/cifar10', train=False, download=True)
-images = [cifar[i][0] for i in range(30)]
+images = [cifar[i][0] for i in range(200)]
 print(f'N={len(images)}', flush=True)
 
 results = {}
