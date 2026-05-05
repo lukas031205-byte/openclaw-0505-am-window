@@ -60,6 +60,9 @@ for sigma in [0.0, 0.3, 0.7, 1.0]:
         'std_ratio': float(np.std(ratios)),
         'n': len(images)
     }
+    # Checkpoint after each sigma
+    with open('/home/kas/.openclaw/workspace-domain/research/0505-am-window/clip_dino_v2_results.json', 'w') as f:
+        json.dump({'results': results, 'n_images': len(images), 'device': device}, f, indent=2)
 
 out = {'results': results, 'n_images': len(images), 'device': device}
 with open('/home/kas/.openclaw/workspace-domain/research/0505-am-window/clip_dino_v2_results.json', 'w') as f:
