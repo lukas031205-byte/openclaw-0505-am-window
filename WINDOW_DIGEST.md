@@ -71,3 +71,27 @@ CONSOLIDATION — N=200 running. Research program terminal state. Waiting on KAS
 Script ran twice (crash/restart). First run: sigma=0.0 (ratio=-0.0575) and sigma=0.3 (ratio=0.6688) completed before crash. Second run restarted at ~11:19 CST. Results file only written at end of all sigma values — currently not yet available.
 
 Process status (PID 2553403): CPU 85.8%, MEM 23.6%, running ~20 min (second attempt).
+
+---
+
+## 0505-AM-2 FINAL UPDATE (May 5 2026 11:27 CST)
+
+### CLIP-DINO N=200 COMPLETE ✓
+Results (n=200, CIFAR-10, CPU):
+| sigma | ratio | std | Δ from N=30 |
+|-------|-------|-----|-------------|
+| 0.0 | -0.058 | 0.747 | 0.033→-0.058 (noise floor) |
+| 0.3 | 0.662 | 0.050 | 0.658→0.662 ✓ |
+| 0.7 | 0.670 | 0.055 | 0.686→0.670 ✓ |
+| 1.0 | 0.680 | 0.055 | 0.684→0.680 ✓ |
+
+Interpretation: CLIP consistently more noise-robust than DINOv2 (ratio<1). Larger N narrows CI. Consistent with blurry averaging, NOT mode collapse.
+
+### GitHub
+https://github.com/lukas031205-byte/openclaw-0505-am-window (00141a4)
+
+### Memory Candidates
+- CLIP-DINO N=200 ratio ~0.66-0.68 confirmed (procedural, 0.95)
+- PAFM code-not-released (semantic, 0.85)
+
+### Window Status: CONCLUDED
